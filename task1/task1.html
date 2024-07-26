@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task1_style.css" />
+    <script  defer src="task1_main.js"></script>
+  </head>
+  <body
+    style="
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: grey;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        background-color: white;
+        padding: 10px;
+      "
+    >
+      <div>
+        <h2>Weather Application</h2>
+        <input type="text" id="input-id" placeholder="City name" />
+        <button id="get-weather-btn">Get Weather</button>
+      </div>
+      <div id="data-div"></div>
+    </div>
+  </body>
+</html>
