@@ -4,6 +4,7 @@ let input = document.getElementById("my-input");
 
 const UrlCategories = "https://fakestoreapi.com/products/categories";
 const UrlProducts = "https://fakestoreapi.com/products";
+let myData = [];
 
 fetch(UrlCategories)
   .then((res) => res.json())
@@ -38,7 +39,7 @@ input.addEventListener("change", function () {
   fetch("https://fakestoreapi.com/products/category/" + getSelecetValue())
     .then((newresult) => newresult.json())
     .then((newdataByCategory) => {
-        resultDiv.innerHTML="";
+      resultDiv.innerHTML = "";
       newdataByCategory.forEach((newmyElement) => {
         if (newmyElement.title.includes(input.value)) {
           resultDiv.innerHTML += `
